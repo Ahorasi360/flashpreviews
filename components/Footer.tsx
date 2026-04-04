@@ -24,7 +24,7 @@ export default function Footer() {
             <div>
               <p style={{ fontFamily: "'JetBrains Mono', monospace" }} className="text-[#B8860B] text-[0.65rem] tracking-[0.2em] uppercase mb-4">Contact</p>
               <div className="flex flex-col gap-3">
-                <a href="tel:3104373343" className="text-[#888888] hover:text-white text-sm transition-colors">(310) 437-3343</a>
+                <a href="tel:3108461658" className="text-[#888888] hover:text-white text-sm transition-colors">(310) 846-1658</a>
                 <a href="mailto:flashpreviews@gmail.com" className="text-[#888888] hover:text-white text-sm transition-colors">flashpreviews@gmail.com</a>
                 <p className="text-[#888888] text-sm">8549 Wilshire Blvd #535<br />Beverly Hills, CA 90211</p>
               </div>
