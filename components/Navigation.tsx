@@ -31,7 +31,7 @@ export default function Navigation() {
             <Link href="/" className="nav-link">Home</Link>
             <Link href="/case-study" className="nav-link">Case Study</Link>
             <Link href="/contact" className="nav-link">Contact</Link>
-            <a href="tel:3104373343" style={{ fontFamily: "'JetBrains Mono', monospace" }} className="text-[0.75rem] text-[#444444] tracking-wider">(310) 437-3343</a>
+            <a href="tel:3108461658" style={{ fontFamily: "'JetBrains Mono', monospace" }} className="text-[0.75rem] text-[#444444] tracking-wider">(310) 846-1658</a>
             <Link href="/contact" className="btn-primary text-sm py-3 px-6">Get Leads</Link>
           </nav>
 
@@ -48,7 +48,7 @@ export default function Navigation() {
           <Link href="/" className="nav-link text-base">Home</Link>
           <Link href="/case-study" className="nav-link text-base">Case Study</Link>
           <Link href="/contact" className="nav-link text-base">Contact</Link>
-          <a href="tel:3104373343" style={{ fontFamily: "'JetBrains Mono', monospace" }} className="text-sm text-[#444444]">(310) 437-3343</a>
+          <a href="tel:3108461658" style={{ fontFamily: "'JetBrains Mono', monospace" }} className="text-sm text-[#444444]">(310) 846-1658</a>
           <Link href="/contact" className="btn-primary text-center">Get Leads for My Business</Link>
         </div>
       )}
