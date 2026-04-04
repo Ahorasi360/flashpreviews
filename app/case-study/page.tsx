@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Case Study: MarVistaLaw Lead Generation System | FlashPreviews Consulting',
   description: 'How we built a statewide California legal lead generation system with 30,000+ pages, 22,000+ impressions in 7 days, at $1,000 per lead value.',
-  alternates: { canonical: 'https://www.flashpreviews.com/case-study' },
+  alternates: { canonical: 'https://www.flashpreviewsconsultinggroup.com/case-study' },
 };
 
 const RESULTS = [
