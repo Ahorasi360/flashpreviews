@@ -91,7 +91,7 @@ export default function Contact() {
 
               <div className="gold-callout">
                 <p className="text-[#B8860B] text-[0.65rem] tracking-[0.2em] uppercase mb-3" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Prefer to call?</p>
-                <a href="tel:3104373343" className="text-[#111111] text-2xl font-medium hover:text-[#B8860B] transition-colors block mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>(310) 437-3343</a>
+                <a href="tel:3108461658" className="text-[#111111] text-2xl font-medium hover:text-[#B8860B] transition-colors block mb-1" style={{ fontFamily: "'Cormorant Garamond', serif" }}>(310) 846-1658</a>
                 <a href="mailto:flashpreviews@gmail.com" className="text-[#888888] text-sm hover:text-[#111111] transition-colors block mb-2">flashpreviews@gmail.com</a>
                 <p className="text-[#888888] text-sm">8549 Wilshire Blvd #535, Beverly Hills, CA 90211</p>
               </div>
