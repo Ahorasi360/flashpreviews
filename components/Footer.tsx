@@ -2,39 +2,53 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0E0E0E] text-[#F0EDE8]">
-      <div className="container py-16 md:py-20">
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-12 mb-16">
-          <div className="max-w-xs">
-            <div className="mb-4">
-              <span style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700 }} className="text-white text-2xl tracking-tight block">FlashPreviews</span>
-              <span style={{ fontFamily: "'JetBrains Mono', monospace" }} className="text-[#B8860B] text-[0.6rem] tracking-[0.25em] uppercase">Consulting Group</span>
+    <footer style={{ background: '#0E0E0E', color: '#F0EDE8' }}>
+      <div style={{ width: '100%', maxWidth: '1400px', margin: '0 auto', padding: '4rem 1.5rem 2rem' }}>
+        {/* Top */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '3rem', marginBottom: '4rem' }}>
+          {/* Brand */}
+          <div style={{ maxWidth: '280px' }}>
+            <div style={{ marginBottom: '1rem' }}>
+              <span style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700, color: '#fff', fontSize: '1.5rem', display: 'block', letterSpacing: '-0.01em' }}>FlashPreviews</span>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", color: '#B8860B', fontSize: '0.6rem', letterSpacing: '0.25em', textTransform: 'uppercase' as const }}>Consulting Group</span>
             </div>
-            <p className="text-[#888888] text-sm leading-relaxed">We build systems that generate high-intent leads — not just websites.</p>
+            <p style={{ color: '#888', fontSize: '0.875rem', lineHeight: 1.6 }}>
+              We build systems that generate high-intent leads — not just websites.
+            </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-10 sm:gap-20">
+
+          {/* Nav columns */}
+          <div style={{ display: 'flex', gap: '4rem', flexWrap: 'wrap' }}>
             <div>
-              <p style={{ fontFamily: "'JetBrains Mono', monospace" }} className="text-[#B8860B] text-[0.65rem] tracking-[0.2em] uppercase mb-4">Pages</p>
-              <div className="flex flex-col gap-3">
-                <Link href="/" className="text-[#888888] hover:text-white text-sm transition-colors">Home</Link>
-                <Link href="/case-study" className="text-[#888888] hover:text-white text-sm transition-colors">Case Study</Link>
-                <Link href="/contact" className="text-[#888888] hover:text-white text-sm transition-colors">Contact</Link>
+              <p style={{ fontFamily: "'JetBrains Mono', monospace", color: '#B8860B', fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase' as const, marginBottom: '1rem' }}>Pages</p>
+              <div style={{ display: 'flex', flexDirection: 'column' as const, gap: '0.75rem' }}>
+                <Link href="/" style={{ color: '#888', fontSize: '0.875rem', textDecoration: 'none' }}>Home</Link>
+                <Link href="/case-study" style={{ color: '#888', fontSize: '0.875rem', textDecoration: 'none' }}>Case Study</Link>
+                <Link href="/contact" style={{ color: '#888', fontSize: '0.875rem', textDecoration: 'none' }}>Contact</Link>
               </div>
             </div>
             <div>
-              <p style={{ fontFamily: "'JetBrains Mono', monospace" }} className="text-[#B8860B] text-[0.65rem] tracking-[0.2em] uppercase mb-4">Contact</p>
-              <div className="flex flex-col gap-3">
-                <a href="tel:3108461658" className="text-[#888888] hover:text-white text-sm transition-colors">(310) 846-1658</a>
-                <a href="mailto:flashpreviews@gmail.com" className="text-[#888888] hover:text-white text-sm transition-colors">flashpreviews@gmail.com</a>
-                <p className="text-[#888888] text-sm">8549 Wilshire Blvd #535<br />Beverly Hills, CA 90211</p>
+              <p style={{ fontFamily: "'JetBrains Mono', monospace", color: '#B8860B', fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase' as const, marginBottom: '1rem' }}>Contact</p>
+              <div style={{ display: 'flex', flexDirection: 'column' as const, gap: '0.75rem' }}>
+                <a href="tel:3108461658" style={{ color: '#888', fontSize: '0.875rem', textDecoration: 'none' }}>(310) 846-1658</a>
+                <a href="mailto:flashpreviews@gmail.com" style={{ color: '#888', fontSize: '0.875rem', textDecoration: 'none' }}>flashpreviews@gmail.com</a>
+                <p style={{ color: '#888', fontSize: '0.875rem', lineHeight: 1.5 }}>8549 Wilshire Blvd #535<br />Beverly Hills, CA 90211</p>
               </div>
             </div>
           </div>
         </div>
-        <div className="h-px bg-[#2A2A2A] mb-8" />
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <p style={{ fontFamily: "'JetBrains Mono', monospace" }} className="text-[#555555] text-xs tracking-wider">© {new Date().getFullYear()} FlashPreviews Consulting Group. All rights reserved.</p>
-          <p style={{ fontFamily: "'JetBrains Mono', monospace" }} className="text-[#555555] text-xs tracking-wider">Beverly Hills, CA — Est. 2014</p>
+
+        {/* Divider */}
+        <div style={{ height: '1px', background: '#2A2A2A', marginBottom: '1.5rem' }} />
+
+        {/* Bottom */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
+          <p style={{ fontFamily: "'JetBrains Mono', monospace", color: '#555', fontSize: '0.7rem', letterSpacing: '0.1em' }}>
+            © {new Date().getFullYear()} FlashPreviews Consulting Group. All rights reserved.
+          </p>
+          <p style={{ fontFamily: "'JetBrains Mono', monospace", color: '#555', fontSize: '0.7rem', letterSpacing: '0.1em' }}>
+            Beverly Hills, CA — Est. 2014
+          </p>
         </div>
       </div>
     </footer>
