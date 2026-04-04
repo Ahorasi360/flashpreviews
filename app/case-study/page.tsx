@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 };
 
 const RESULTS = [
-  { num: '30,805',  label: 'Pages Deployed',         sub: 'Live across California markets' },
-  { num: '19,200+', label: 'Pages Indexed by Google', sub: 'Growing weekly' },
-  { num: '27,200+', label: 'Search Impressions',      sub: '28-day window, April 2026' },
-  { num: '30 Days', label: 'Launch to Live',          sub: 'Concept to full deployment' },
+  { num: '30,805',  label: 'Pages Deployed',              sub: 'Live across California markets' },
+  { num: '19,200+', label: 'Pages Indexed by Google',      sub: '0 to 19,200 in the first week' },
+  { num: '27,200+', label: 'Search Impressions',           sub: '28-day window, April 2026' },
+  { num: '1 Week',  label: 'Zero to Indexed at Scale',     sub: 'Fastest indexing we have seen' },
 ];
 
 export default function CaseStudy() {
@@ -134,11 +134,11 @@ export default function CaseStudy() {
               </div>
               <div className="md:col-span-9">
                 <p className="text-[#555555] text-lg leading-relaxed mb-10">
-                  As of April 2026: 19,200+ pages indexed, 27,200+ impressions in the past 28 days, zero ad spend. Top ranking bilingual queries include 'abogado de bienes raices' and 'abogados cerca de mi.' Google continues to index new pages weekly — the system compounds month over month.
+                  Within the first week of launch, Google indexed 19,200+ pages — zero to full scale in 7 days. By the 28-day mark: 27,200+ search impressions across California, bilingual legal queries ranking in every major market, zero ad spend. The system was generating search visibility before most competitors had updated their own sites.
                 </p>
                 <blockquote className="gold-callout mb-10" cite="https://www.flashpreviewsconsultinggroup.com/case-study">
                   <p className="text-[#111111] text-xl md:text-2xl leading-relaxed" style={{ fontFamily:"'Cormorant Garamond', serif", fontStyle:'italic' }}>
-                    "19,200+ pages indexed by Google. 27,200+ search impressions in the past 28 days — and growing. Top ranking queries include bilingual legal terms across every major California city. Zero ad spend. The system compounds month over month."
+                    "Zero to 19,200 pages indexed in the first week after launch. 0 to 19,200 pages indexed in one week, 27,200+ impressions in 28 days — with zero ad spend. The system ranked bilingual legal queries across every major California city before most law firms had finished their first meeting."
                   </p>
                 </blockquote>
                 <dl className="grid grid-cols-3 gap-8 border-t border-[#E5E5E5] pt-8">
