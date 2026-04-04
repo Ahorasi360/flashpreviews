@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.flashpreviewsconsultinggroup.com/contact/thank-you' },
   title: 'Request Received | FlashPreviews Consulting Group',
   description: 'Your market request has been received. We review fit based on market, category, and current system availability.',
   robots: { index: false, follow: false },
