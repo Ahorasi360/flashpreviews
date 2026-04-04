@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 };
 
 const RESULTS = [
-  { num: '30,000+', label: 'Pages Deployed',    sub: 'System-wide' },
-  { num: '22,000+', label: 'Impressions',        sub: 'First 7 days' },
-  { num: '$1,000',  label: 'Per Lead Value',     sub: 'High-intent legal' },
-  { num: '30 Days', label: 'Launch Timeline',    sub: 'Concept to live' },
+  { num: '30,805', label: 'Pages Deployed',        sub: 'Live in Google Search Console' },
+  { num: '27.2K',  label: 'Impressions (28 Days)', sub: 'As of April 2026 — growing' },
+  { num: '19.2K',  label: 'Pages Indexed',         sub: '62% of all pages indexed' },
+  { num: '30 Days',label: 'Launch to Live',         sub: 'Concept to full deployment' },
 ];
 
 export default function CaseStudy() {
@@ -134,11 +134,11 @@ export default function CaseStudy() {
               </div>
               <div className="md:col-span-9">
                 <p className="text-[#555555] text-lg leading-relaxed mb-10">
-                  Within 7 days of launch: 22,000+ impressions, 1,000+ unique queries, zero ad spend. Google indexed and ranked pages immediately. The system has been generating inbound leads every week since.
+                  As of April 2026: 19,200+ pages indexed, 27,200+ impressions in the past 28 days, zero ad spend. Top ranking bilingual queries include 'abogado de bienes raices' and 'abogados cerca de mi.' Google continues to index new pages weekly — the system compounds month over month.
                 </p>
                 <blockquote className="gold-callout mb-10" cite="https://www.flashpreviewsconsultinggroup.com/case-study">
                   <p className="text-[#111111] text-xl md:text-2xl leading-relaxed" style={{ fontFamily:"'Cormorant Garamond', serif", fontStyle:'italic' }}>
-                    "8,150+ pages indexed by Google within 30 days of launch. The system is now generating impressions across legal search queries in every major California market."
+                    "19,200+ pages indexed by Google. 27,200+ impressions in the last 28 days. Top queries include bilingual legal terms — abogado de bienes raices, abogados cerca de mi. The system is actively generating search traffic across California."
                   </p>
                 </blockquote>
                 <dl className="grid grid-cols-3 gap-8 border-t border-[#E5E5E5] pt-8">
