@@ -48,7 +48,7 @@ export default function Home() {
             <p className="text-[#888888] text-xs tracking-wider mb-8" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Limited availability per market</p>
             <div className="flex items-center gap-6">
               <div className="h-px w-8 bg-[#B8860B]" />
-              <p style={{ fontFamily: "'JetBrains Mono', monospace" }} className="text-[#888888] text-xs tracking-widest uppercase">Beverly Hills, CA · Est. 2014 · (310) 437-3343</p>
+              <p style={{ fontFamily: "'JetBrains Mono', monospace" }} className="text-[#888888] text-xs tracking-widest uppercase">Beverly Hills, CA · Est. 2014 · (310) 846-1658</p>
             </div>
           </div>
         </div>
@@ -225,7 +225,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-primary text-center">Request a Consultation</Link>
-              <a href="tel:3104373343" className="btn-ghost text-center" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.8rem', letterSpacing: '0.1em' }}>(310) 437-3343</a>
+              <a href="tel:3108461658" className="btn-ghost text-center" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.8rem', letterSpacing: '0.1em' }}>(310) 846-1658</a>
             </div>
           </div>
         </div>
