@@ -57,7 +57,9 @@ export default function ChatWidget() {
       {/* Floating button */}
       <button
         onClick={() => setOpen(!open)}
-        aria-label="Open chat"
+        aria-label={open ? "Close chat assistant" : "Open chat assistant"}
+        aria-expanded={open}
+        aria-haspopup="dialog"
         style={{
           position: 'fixed', bottom: '24px', right: '24px', zIndex: 1000,
           width: '56px', height: '56px', borderRadius: '0',
@@ -75,7 +77,7 @@ export default function ChatWidget() {
 
       {/* Chat panel */}
       {open && (
-        <div style={{
+        <div role="dialog" aria-label="FlashPreviews chat assistant" aria-modal="true" style={{
           position: 'fixed', bottom: '92px', right: '24px', zIndex: 999,
           width: '360px', maxWidth: 'calc(100vw - 48px)',
           background: '#ffffff', border: '1px solid #E5E5E5',
@@ -94,7 +96,7 @@ export default function ChatWidget() {
           </div>
 
           {/* Messages */}
-          <div style={{ flex: 1, overflowY: 'auto', padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <div role="log" aria-live="polite" aria-label="Chat messages" style={{ flex: 1, overflowY: 'auto', padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {messages.map((m, i) => (
               <div key={i} style={{
                 maxWidth: '85%',
@@ -157,7 +159,7 @@ export default function ChatWidget() {
               value={input}
               onChange={e => setInput(e.target.value)}
               onKeyDown={handleKey}
-              placeholder="Type a message..."
+              placeholder="Type a message..." aria-label="Chat message input"
               disabled={loading}
               style={{
                 flex: 1, padding: '10px 12px', fontSize: '13px',
@@ -176,7 +178,7 @@ export default function ChatWidget() {
                 fontFamily: "'JetBrains Mono', monospace", fontSize: '16px',
                 transition: 'all 0.2s',
               }}
-            >
+             aria-label="Send message">
               ↗
             </button>
           </div>
