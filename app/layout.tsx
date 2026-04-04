@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   verification: {
     google: 'lklzKEqoG_-WlDY6XePt8jSH7rrY2MHRT-RNeoE3YNw',
   },
+  alternates: { canonical: 'https://www.flashpreviewsconsultinggroup.com' },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
 };
 
