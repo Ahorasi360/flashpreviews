@@ -209,6 +209,38 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* FAQ */}
+      <section className="bg-white py-20 md:py-28 border-t border-[#E5E5E5]">
+        <div className="container">
+          <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <div>
+              <span className="section-label block mb-3">Common Questions</span>
+              <h2 className="text-4xl md:text-5xl text-[#111111]" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700 }}>
+                What You Should Know
+              </h2>
+            </div>
+          </div>
+          <div className="border-t border-[#E5E5E5] max-w-3xl">
+            {[
+              { q: 'What kind of businesses do you build lead systems for?', a: 'Primarily attorneys, real estate professionals, and local service businesses that want inbound leads rather than relying only on referrals or paid advertising.' },
+              { q: 'What is a programmatic SEO system?', a: 'A system that deploys thousands of targeted pages at scale — each engineered to rank for specific high-intent search queries in your market. Instead of one or two pages, we build hundreds or thousands, capturing demand across an entire city or region.' },
+              { q: 'Do you only build websites?', a: 'No. We build lead generation infrastructure. The result includes a website, but the goal is qualified inbound leads — not a digital brochure.' },
+              { q: 'How do leads get delivered?', a: 'Captured directly from the system and delivered to your inbox and phone in real time. No shared lead pools. No middlemen. Every lead is exclusively yours.' },
+              { q: 'Do you work exclusively by market?', a: 'Yes. One system per market per vertical. Once your market is claimed, we do not build a competing system for another operator in the same space.' },
+            ].map((item, i) => (
+              <details key={i} className="group border-b border-[#F0F0F0]">
+                <summary className="flex justify-between items-center py-6 cursor-pointer list-none gap-4">
+                  <span className="text-[#111111] text-base font-medium" style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '1.1rem' }}>{item.q}</span>
+                  <span className="text-[#B8860B] shrink-0" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '1rem', transition: 'transform 0.2s' }}>+</span>
+                </summary>
+                <p className="text-[#666666] text-sm leading-relaxed pb-6">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 md:py-36 bg-[#F8F7F4] border-t border-[#E5E5E5]">
         <div className="container">
