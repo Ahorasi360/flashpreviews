@@ -22,50 +22,62 @@ export default function MetricCard({
   gold?: boolean;
   duration?: number;
 }) {
-  const [display, setDisplay] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const hasRun = useRef(false);
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const fired = useRef(false);
 
   useEffect(() => {
-    const node = containerRef.current;
-    if (!node) return;
+    const el = ref.current;
+    if (!el) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasRun.current) {
-          hasRun.current = true;
-          const startTime = performance.now();
-          const animate = (now: number) => {
-            const elapsed = now - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            setDisplay(Math.round(easeOutQuart(progress) * value));
-            if (progress < 1) requestAnimationFrame(animate);
-          };
-          requestAnimationFrame(animate);
-        }
-      },
-      { threshold: 0.3 }
-    );
+    const run = () => {
+      if (fired.current) return;
+      fired.current = true;
+      const t0 = performance.now();
+      const tick = (now: number) => {
+        const p = Math.min((now - t0) / duration, 1);
+        setCount(Math.round(easeOutQuart(p) * value));
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
 
-    observer.observe(node);
-    return () => observer.disconnect();
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) run(); }, { threshold: 0.2 });
+    obs.observe(el);
+
+    // Fallback: also start after 1s if IntersectionObserver never fires
+    const fallback = setTimeout(run, 1000);
+
+    return () => { obs.disconnect(); clearTimeout(fallback); };
   }, [value, duration]);
 
   return (
-    <div ref={containerRef} className={gold ? 'stat-card-gold' : 'stat-card'}>
+    <div
+      ref={ref}
+      style={{
+        borderTop: gold ? '2px solid #B8860B' : '1px solid #E5E5E5',
+        paddingTop: '2rem',
+      }}
+    >
       <div
-        className="text-5xl md:text-6xl lg:text-7xl mb-3"
         style={{
           fontFamily: "'JetBrains Mono', monospace",
           fontWeight: 700,
+          fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
           color: '#111111',
-          lineHeight: 1.1,
+          lineHeight: 1.05,
+          marginBottom: '0.75rem',
+          letterSpacing: '-0.02em',
         }}
       >
-        {prefix}{display.toLocaleString()}{suffix}
+        {prefix}{count.toLocaleString()}{suffix}
       </div>
-      <p className="font-medium text-sm md:text-base mb-1" style={{ color: '#111111' }}>{label}</p>
-      <p className="text-xs md:text-sm" style={{ color: '#888888' }}>{sub}</p>
+      <p style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 500, fontSize: '0.9rem', color: '#111111', marginBottom: '4px' }}>
+        {label}
+      </p>
+      <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.8rem', color: '#888888' }}>
+        {sub}
+      </p>
     </div>
   );
 }
