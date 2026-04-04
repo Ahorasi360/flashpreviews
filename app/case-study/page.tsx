@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Case Study: MarVistaLaw Lead Generation System | FlashPreviews Consulting',
-  description: 'How we built a statewide California legal lead generation system with 30,000+ pages, 22,000+ impressions in 7 days, at $1,000 per lead value.',
+  description: 'How we built a statewide California legal lead generation system with 30,000+ pages, 27,200+ impressions in 7 days, at $1,000 per lead value.',
   alternates: { canonical: 'https://www.flashpreviewsconsultinggroup.com/case-study' },
 };
 
@@ -143,9 +143,9 @@ export default function CaseStudy() {
                 </blockquote>
                 <dl className="grid grid-cols-3 gap-8 border-t border-[#E5E5E5] pt-8">
                   {[
-                    { num:'8,150+', label:'Pages Indexed by Google' },
+                    { num:'19,200+', label:'Pages Indexed by Google' },
                     { num:'1,000+', label:'Unique Search Queries' },
-                    { num:'27K',    label:'Weekly Impressions (growing)' },
+                    { num:'27,200+', label:'Search Impressions (28 Days)' },
                   ].map(item => (
                     <div key={item.label}>
                       <dd className="text-3xl font-bold text-[#111111] mb-2" style={{ fontFamily:"'JetBrains Mono', monospace" }}>{item.num}</dd>
