@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 };
 
 const RESULTS = [
-  { num: '30,805', label: 'Pages Deployed',        sub: 'Live in Google Search Console' },
-  { num: '27.2K',  label: 'Impressions (28 Days)', sub: 'As of April 2026 — growing' },
-  { num: '19.2K',  label: 'Pages Indexed',         sub: '62% of all pages indexed' },
-  { num: '30 Days',label: 'Launch to Live',         sub: 'Concept to full deployment' },
+  { num: '30,805',  label: 'Pages Deployed',         sub: 'Live across California markets' },
+  { num: '19,200+', label: 'Pages Indexed by Google', sub: 'Growing weekly' },
+  { num: '27,200+', label: 'Search Impressions',      sub: '28-day window, April 2026' },
+  { num: '30 Days', label: 'Launch to Live',          sub: 'Concept to full deployment' },
 ];
 
 export default function CaseStudy() {
@@ -138,7 +138,7 @@ export default function CaseStudy() {
                 </p>
                 <blockquote className="gold-callout mb-10" cite="https://www.flashpreviewsconsultinggroup.com/case-study">
                   <p className="text-[#111111] text-xl md:text-2xl leading-relaxed" style={{ fontFamily:"'Cormorant Garamond', serif", fontStyle:'italic' }}>
-                    "19,200+ pages indexed by Google. 27,200+ impressions in the last 28 days. Top queries include bilingual legal terms — abogado de bienes raices, abogados cerca de mi. The system is actively generating search traffic across California."
+                    "19,200+ pages indexed by Google. 27,200+ search impressions in the past 28 days — and growing. Top ranking queries include bilingual legal terms across every major California city. Zero ad spend. The system compounds month over month."
                   </p>
                 </blockquote>
                 <dl className="grid grid-cols-3 gap-8 border-t border-[#E5E5E5] pt-8">
