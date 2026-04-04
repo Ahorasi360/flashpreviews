@@ -80,10 +80,10 @@ export default function CaseStudy() {
             </div>
             <div className="md:col-span-9">
               <p className="text-[#555555] text-lg leading-relaxed mb-6">
-                California's legal market is one of the most competitive in the country. Law firms spend tens of thousands per month on Google Ads, fighting for the same keywords. The client needed a way to capture high-intent legal traffic at scale — without depending on paid advertising.
+                California's legal market is one of the most competitive in the country. Firms spend tens of thousands per month on Google Ads chasing the same 10 keywords. The brief: capture high-intent legal traffic at scale without a single dollar in ad spend.
               </p>
               <p className="text-[#555555] text-base leading-relaxed">
-                The goal: build an organic lead generation system that would rank across hundreds of city-level legal search queries in both English and Spanish, creating a sustainable traffic engine that compounds over time.
+                The goal: build a system that ranks across hundreds of city-level legal queries in English and Spanish — creating a lead engine that runs 24/7 and compounds month over month.
               </p>
             </div>
           </div>
@@ -130,7 +130,7 @@ export default function CaseStudy() {
             </div>
             <div className="md:col-span-9">
               <p className="text-[#555555] text-lg leading-relaxed mb-10">
-                Within 7 days of launch, the system generated over 22,000 impressions across 1,000+ unique search queries. Google began indexing and ranking pages immediately — without a single dollar spent on advertising.
+                Within 7 days of launch: 22,000+ impressions, 1,000+ unique queries, zero ad spend. Google indexed and ranked pages immediately. The system has been generating inbound leads every week since.
               </p>
               <div className="gold-callout mb-10">
                 <p className="text-[#111111] text-xl md:text-2xl leading-relaxed" style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic' }}>
