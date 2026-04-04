@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     images: [{ url: `${DOMAIN}/og-image.jpg`, width: 1200, height: 630, alt: 'FlashPreviews Consulting Group' }],
   },
   twitter: { card: 'summary_large_image', title: 'FlashPreviews Consulting Group | Lead Generation Systems', description: 'We build systems that generate high-intent leads — not just websites.' },
+  verification: {
+    google: 'lklzKEqoG_-WlDY6XePt8jSH7rrY2MHRT-RNeoE3YNw',
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
 };
 
