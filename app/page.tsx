@@ -26,9 +26,9 @@ const FEATURES = [
 ];
 
 const MARKETS = [
-  { market: 'Legal Services', desc: 'Attorneys, law firms, and legal professionals across all practice areas.', examples: ['Personal Injury', 'Immigration', 'Estate Planning', 'Family Law'] },
-  { market: 'Real Estate', desc: 'Agents, brokers, and developers targeting buyers and sellers in competitive markets.', examples: ['Residential Sales', 'Commercial', 'Mortgage', 'Property Management'] },
-  { market: 'Local Service Businesses', desc: 'High-value service providers who depend on local search visibility to acquire clients.', examples: ['Medical Practices', 'Financial Services', 'Home Services', 'Insurance'] },
+  { market: 'Legal Services', desc: 'Law firms and attorneys looking to capture high-intent search traffic and convert it into qualified inbound cases — without relying solely on referrals or paid ads.', examples: ['Personal Injury', 'Immigration', 'Estate Planning', 'Family Law'] },
+  { market: 'Real Estate', desc: 'Agents, brokers, and real estate professionals who want consistent inbound buyer and seller leads in competitive markets.', examples: ['Residential Sales', 'Commercial', 'Mortgage', 'Property Management'] },
+  { market: 'Local Service Businesses', desc: 'High-value service businesses that depend on local visibility and need a reliable system to generate inbound clients from search.', examples: ['Medical Practices', 'Financial Services', 'Home Services', 'Insurance'] },
 ];
 
 const FAQS = [
