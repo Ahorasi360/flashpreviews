@@ -1,11 +1,19 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 
-function easeOutQuart(t: number): number {
+function easeOutQuart(t: number) {
   return 1 - Math.pow(1 - t, 4);
 }
 
-interface Props {
+export default function MetricCard({
+  value,
+  prefix = '',
+  suffix = '',
+  label,
+  sub,
+  gold = false,
+  duration = 2000,
+}: {
   value: number;
   prefix?: string;
   suffix?: string;
@@ -13,44 +21,51 @@ interface Props {
   sub: string;
   gold?: boolean;
   duration?: number;
-}
-
-export default function MetricCard({
-  value, prefix = '', suffix = '', label, sub, gold = false, duration = 2200
-}: Props) {
-  const [count, setCount] = useState(0);
-  const wrapRef = useRef<HTMLDivElement>(null);
-  const started = useRef(false);
+}) {
+  const [display, setDisplay] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const hasRun = useRef(false);
 
   useEffect(() => {
-    const el = wrapRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting && !started.current) {
-        started.current = true;
-        const start = performance.now();
-        const tick = (now: number) => {
-          const p = Math.min((now - start) / duration, 1);
-          setCount(Math.round(easeOutQuart(p) * value));
-          if (p < 1) requestAnimationFrame(tick);
-        };
-        requestAnimationFrame(tick);
-      }
-    }, { threshold: 0.2 });
-    observer.observe(el);
+    const node = containerRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasRun.current) {
+          hasRun.current = true;
+          const startTime = performance.now();
+          const animate = (now: number) => {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            setDisplay(Math.round(easeOutQuart(progress) * value));
+            if (progress < 1) requestAnimationFrame(animate);
+          };
+          requestAnimationFrame(animate);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(node);
     return () => observer.disconnect();
   }, [value, duration]);
 
   return (
-    <div ref={wrapRef} className={gold ? 'stat-card-gold' : 'stat-card'}>
+    <div ref={containerRef} className={gold ? 'stat-card-gold' : 'stat-card'}>
       <div
-        className="text-5xl md:text-6xl lg:text-7xl mb-3 text-[#111111]"
-        style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 700 }}
+        className="text-5xl md:text-6xl lg:text-7xl mb-3"
+        style={{
+          fontFamily: "'JetBrains Mono', monospace",
+          fontWeight: 700,
+          color: '#111111',
+          lineHeight: 1.1,
+        }}
       >
-        {prefix}{count.toLocaleString()}{suffix}
+        {prefix}{display.toLocaleString()}{suffix}
       </div>
-      <p className="text-[#111111] font-medium text-sm md:text-base mb-1">{label}</p>
-      <p className="text-[#888888] text-xs md:text-sm">{sub}</p>
+      <p className="font-medium text-sm md:text-base mb-1" style={{ color: '#111111' }}>{label}</p>
+      <p className="text-xs md:text-sm" style={{ color: '#888888' }}>{sub}</p>
     </div>
   );
 }
