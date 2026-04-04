@@ -21,7 +21,7 @@ export default function Navigation() {
       role="banner"
       className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${scrolled ? 'border-b border-[#E5E5E5]' : ''}`}
     >
-      <div className="container">
+      <div className="fp-container">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" aria-label="FlashPreviews Consulting Group — Home">
             <div className="flex flex-col leading-none">
