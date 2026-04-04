@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   title: 'Lead Generation Systems for Attorneys, Real Estate & Local Businesses | FlashPreviews Consulting Group',
   description: 'FlashPreviews Consulting Group builds programmatic SEO systems, lead generation engines, and bilingual acquisition infrastructure that turn search demand into qualified leads. Beverly Hills, CA.',
   keywords: 'lead generation systems, programmatic SEO, qualified leads, bilingual lead generation, attorney lead generation, real estate lead generation, local business lead generation, client acquisition systems',
-  alternates: { canonical: DOMAIN },
   openGraph: {
     type: 'website', url: DOMAIN, siteName: 'FlashPreviews Consulting Group',
     title: 'Lead Generation Systems for Attorneys, Real Estate & Local Businesses | FlashPreviews Consulting Group',
