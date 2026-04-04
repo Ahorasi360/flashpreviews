@@ -49,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         '@id': `${DOMAIN}/#service`,
         name: 'Lead Generation Systems',
         provider: { '@id': `${DOMAIN}/#organization` },
-        description: 'Programmatic SEO systems, lead generation engines, and bilingual acquisition infrastructure that turn search demand into qualified leads.',
+        description: 'Programmatic SEO systems and lead generation engines deployed across 482 California cities and 51 legal service categories — English and Spanish. From Calexico to Redding.',
         areaServed: { '@type': 'Country', name: 'United States' },
         serviceType: ['Programmatic SEO', 'Lead Generation', 'Bilingual Acquisition Systems'],
       },
