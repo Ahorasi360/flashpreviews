@@ -53,17 +53,15 @@ const FAQS = [
 
 /* ─── shared styles ────────────────────────────────────────── */
 const C = {
-  wrap:    { width: '100%', maxWidth: '1400px', margin: '0 auto', padding: '0 1.5rem' } as React.CSSProperties,
-  serif:   { fontFamily: ''Cormorant Garamond', serif', fontWeight: 700 } as React.CSSProperties,
-  mono:    { fontFamily: ''JetBrains Mono', monospace' } as React.CSSProperties,
-  gold:    { color: '#B8860B' } as React.CSSProperties,
-  white:   { color: '#ffffff' } as React.CSSProperties,
-  muted:   { color: '#888888' } as React.CSSProperties,
+  wrap:    { width: '100%', maxWidth: '1400px', margin: '0 auto', padding: '0 1.5rem' },
+  serif:   { fontFamily: ''Cormorant Garamond', serif', fontWeight: 700 },
+  mono:    { fontFamily: ''JetBrains Mono', monospace' },
+  gold:    { color: '#B8860B' },
+  white:   { color: '#ffffff' },
+  muted:   { color: '#888888' },
   label:   { fontFamily: ''JetBrains Mono', monospace', fontSize: '0.7rem', letterSpacing: '0.2em', textTransform: 'uppercase' as const, color: '#B8860B' },
-  rule:    { height: '2px', background: '#B8860B', width: '3rem', flexShrink: 0 } as React.CSSProperties,
+  rule:    { height: '2px', background: '#B8860B', width: '3rem', flexShrink: 0 },
 };
-
-import React from 'react';
 
 /* ─── page ─────────────────────────────────────────────────── */
 export default function Home() {
