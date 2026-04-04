@@ -2,13 +2,11 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#0E0E0E', color: '#ffffff', fontFamily: "'DM Sans', sans-serif" }}>
-      <div style={{ width: '100%', maxWidth: '1400px', margin: '0 auto', padding: '4rem 1.25rem 2rem' }}>
+    <footer style={{ background: '#0E0E0E', color: '#ffffff', fontFamily: "'DM Sans', sans-serif" }} role="contentinfo">
+      <div className="fp-container" style={{ paddingTop: '4rem', paddingBottom: '2rem' }}>
 
         {/* Top row */}
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '3rem', marginBottom: '3rem' }}>
-
-          {/* Brand */}
           <div style={{ maxWidth: '300px' }}>
             <div style={{ marginBottom: '1rem' }}>
               <span style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700, color: '#ffffff', fontSize: '1.6rem', display: 'block' }}>FlashPreviews</span>
@@ -19,7 +17,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Links */}
           <div style={{ display: 'flex', gap: '3rem', flexWrap: 'wrap' }}>
             <div>
               <p style={{ fontFamily: "'JetBrains Mono', monospace", color: '#B8860B', fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase' as const, marginBottom: '1rem' }}>Pages</p>
@@ -32,7 +29,7 @@ export default function Footer() {
             <div>
               <p style={{ fontFamily: "'JetBrains Mono', monospace", color: '#B8860B', fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase' as const, marginBottom: '1rem' }}>Contact</p>
               <div style={{ display: 'flex', flexDirection: 'column' as const, gap: '0.6rem' }}>
-                <a href="tel:3108461658" style={{ color: '#cccccc', fontSize: '0.9rem', textDecoration: 'none' }}>(310) 846-1658</a>
+                <a href="tel:3108461658" style={{ color: '#cccccc', fontSize: '0.9rem', textDecoration: 'none' }} aria-label="Call 310-846-1658">(310) 846-1658</a>
                 <a href="mailto:flashpreviews@gmail.com" style={{ color: '#cccccc', fontSize: '0.9rem', textDecoration: 'none' }}>flashpreviews@gmail.com</a>
                 <p style={{ color: '#cccccc', fontSize: '0.875rem', lineHeight: 1.55, margin: 0 }}>8549 Wilshire Blvd #535<br />Beverly Hills, CA 90211</p>
               </div>
@@ -41,16 +38,24 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div style={{ height: '1px', background: '#2A2A2A', marginBottom: '1.5rem' }} />
+        <div style={{ height: '1px', background: '#2A2A2A', marginBottom: '1.25rem' }} aria-hidden="true" />
 
-        {/* Bottom */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '0.75rem' }}>
-          <p style={{ fontFamily: "'JetBrains Mono', monospace", color: '#888888', fontSize: '0.7rem', letterSpacing: '0.08em' }}>
+        {/* Legal bottom row */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
+          <p style={{ fontFamily: "'JetBrains Mono', monospace", color: '#666666', fontSize: '0.68rem', letterSpacing: '0.06em' }}>
             © {new Date().getFullYear()} FlashPreviews Consulting Group. All rights reserved.
           </p>
-          <p style={{ fontFamily: "'JetBrains Mono', monospace", color: '#888888', fontSize: '0.7rem', letterSpacing: '0.08em' }}>
-            Beverly Hills, CA — Est. 2014
-          </p>
+          <nav aria-label="Legal navigation" style={{ display: 'flex', flexWrap: 'wrap', gap: '1.25rem' }}>
+            {[
+              { href: '/privacy',       label: 'Privacy Policy' },
+              { href: '/terms',         label: 'Terms of Service' },
+              { href: '/accessibility', label: 'Accessibility' },
+            ].map(l => (
+              <Link key={l.href} href={l.href} style={{ fontFamily: "'JetBrains Mono', monospace", color: '#666666', fontSize: '0.68rem', letterSpacing: '0.06em', textDecoration: 'none' }}>
+                {l.label}
+              </Link>
+            ))}
+          </nav>
         </div>
 
       </div>
