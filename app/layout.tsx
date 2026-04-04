@@ -3,14 +3,14 @@ import ChatWidget from '@/components/ChatWidget';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.flashpreviews.com'),
+  metadataBase: new URL('https://www.flashpreviewsconsultinggroup.com'),
   title: 'Lead Generation Systems for Attorneys, Real Estate & Local Businesses | FlashPreviews Consulting Group',
   description: 'FlashPreviews Consulting Group builds programmatic SEO systems, lead generation engines, and bilingual acquisition infrastructure that turn search demand into qualified leads.',
   keywords: 'lead generation systems, programmatic SEO, qualified leads, bilingual lead generation, attorney lead generation, real estate lead generation, local business lead generation, client acquisition systems',
-  alternates: { canonical: 'https://www.flashpreviews.com' },
+  alternates: { canonical: 'https://www.flashpreviewsconsultinggroup.com' },
   openGraph: {
     type: 'website',
-    url: 'https://www.flashpreviews.com',
+    url: 'https://www.flashpreviewsconsultinggroup.com',
     siteName: 'FlashPreviews Consulting Group',
     title: 'Lead Generation Systems for Attorneys, Real Estate & Local Businesses | FlashPreviews Consulting Group',
     description: 'FlashPreviews Consulting Group builds programmatic SEO systems, lead generation engines, and bilingual acquisition infrastructure that turn search demand into qualified leads.',
@@ -26,9 +26,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@graph': [
       {
         '@type': 'Organization',
-        '@id': 'https://www.flashpreviews.com/#organization',
+        '@id': 'https://www.flashpreviewsconsultinggroup.com/#organization',
         name: 'FlashPreviews Consulting Group',
-        url: 'https://www.flashpreviews.com',
+        url: 'https://www.flashpreviewsconsultinggroup.com',
         telephone: '(310) 846-1658',
         email: 'flashpreviews@gmail.com',
         address: { '@type': 'PostalAddress', streetAddress: '8549 Wilshire Blvd Suite 535', addressLocality: 'Beverly Hills', addressRegion: 'CA', postalCode: '90211', addressCountry: 'US' },
@@ -39,16 +39,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://www.flashpreviews.com/#website',
-        url: 'https://www.flashpreviews.com',
+        '@id': 'https://www.flashpreviewsconsultinggroup.com/#website',
+        url: 'https://www.flashpreviewsconsultinggroup.com',
         name: 'FlashPreviews Consulting Group',
-        publisher: { '@id': 'https://www.flashpreviews.com/#organization' },
+        publisher: { '@id': 'https://www.flashpreviewsconsultinggroup.com/#organization' },
       },
       {
         '@type': 'Service',
-        '@id': 'https://www.flashpreviews.com/#service',
+        '@id': 'https://www.flashpreviewsconsultinggroup.com/#service',
         name: 'Lead Generation Systems',
-        provider: { '@id': 'https://www.flashpreviews.com/#organization' },
+        provider: { '@id': 'https://www.flashpreviewsconsultinggroup.com/#organization' },
         description: 'Programmatic SEO systems, lead generation engines, and bilingual acquisition infrastructure that turn search demand into qualified leads.',
         areaServed: { '@type': 'Country', name: 'United States' },
         audience: { '@type': 'Audience', audienceType: 'Attorneys, Real Estate Professionals, Local Service Businesses' },
