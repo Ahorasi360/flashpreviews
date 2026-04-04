@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import MetricCard from '@/components/MetricCard';
 
 const METRICS = [
-  { value: '30,000+', label: 'Pages Deployed at Scale', sub: 'Live across legal and real estate markets', gold: true },
-  { value: '22,000+', label: 'Search Impressions in 7 Days', sub: 'From a single system launch — no ads', gold: false },
-  { value: '$1,000', label: 'Per Lead Generated', sub: 'High-intent buyers, not browsers', gold: true },
-  { value: '10 yrs', label: 'Building Lead Systems', sub: 'Trusted by attorneys and agents since 2014', gold: false },
+  { value: 30000, prefix: '', suffix: '+', label: 'Pages Deployed at Scale', sub: 'Live across legal and real estate markets', gold: true },
+  { value: 22000, prefix: '', suffix: '+', label: 'Search Impressions in 7 Days', sub: 'From a single system launch — no ads', gold: false },
+  { value: 1000, prefix: '$', suffix: '', label: 'Per Lead Generated', sub: 'High-intent buyers, not browsers', gold: true },
+  { value: 10, prefix: '', suffix: ' yrs', label: 'Building Lead Systems', sub: 'Trusted by attorneys and agents since 2014', gold: false },
 ];
 
 const SERVICES = [
@@ -66,11 +67,15 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {METRICS.map((m) => (
-              <div key={m.label} className={m.gold ? 'stat-card-gold' : 'stat-card'}>
-                <div className="text-5xl md:text-6xl lg:text-7xl mb-3 text-[#111111]" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 700 }}>{m.value}</div>
-                <p className="text-[#111111] font-medium text-sm md:text-base mb-1">{m.label}</p>
-                <p className="text-[#888888] text-xs md:text-sm">{m.sub}</p>
-              </div>
+              <MetricCard
+                key={m.label}
+                value={m.value}
+                prefix={m.prefix}
+                suffix={m.suffix}
+                label={m.label}
+                sub={m.sub}
+                gold={m.gold}
+              />
             ))}
           </div>
           <div className="mt-16 gold-callout max-w-2xl">
