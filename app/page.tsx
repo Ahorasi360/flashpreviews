@@ -3,16 +3,16 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 const METRICS = [
-  { value: '30,000+', label: 'Pages Deployed', sub: 'Programmatic SEO infrastructure', gold: true },
-  { value: '22,000+', label: 'Impressions in 7 Days', sub: 'From a single system launch', gold: false },
-  { value: '$1,000', label: 'Per Lead Value', sub: 'High-intent legal leads', gold: true },
-  { value: '10 yrs', label: 'In Operation', sub: 'Trusted since 2014', gold: false },
+  { value: '30,000+', label: 'Pages Deployed at Scale', sub: 'Live across legal and real estate markets', gold: true },
+  { value: '22,000+', label: 'Search Impressions in 7 Days', sub: 'From a single system launch — no ads', gold: false },
+  { value: '$1,000', label: 'Per Lead Generated', sub: 'High-intent buyers, not browsers', gold: true },
+  { value: '10 yrs', label: 'Building Lead Systems', sub: 'Trusted by attorneys and agents since 2014', gold: false },
 ];
 
 const SERVICES = [
-  { num: '01', title: 'Programmatic SEO Systems', desc: 'We deploy thousands of optimized pages targeting high-intent search queries in your market. Each page is engineered to rank and convert — not just exist.', tags: ['Scale', 'Organic Traffic', 'Long-tail Capture'] },
-  { num: '02', title: 'Lead Generation Engines', desc: 'End-to-end systems that capture, qualify, and deliver high-intent prospects directly to your firm. Built for attorneys, real estate professionals, and service businesses.', tags: ['Qualified Leads', 'Automated Delivery', 'High Intent'] },
-  { num: '03', title: 'Bilingual Acquisition Systems', desc: 'Reach Spanish-speaking markets that your competitors ignore. We build fully bilingual systems that capture an underserved, high-value audience.', tags: ['English + Spanish', 'Underserved Markets', 'Dual Reach'] },
+  { num: '01', title: 'Programmatic SEO Systems', desc: 'Thousands of pages targeting the exact queries your buyers type into Google. Built to rank, capture, and convert — at a scale no traditional agency can match.', tags: ['Scale', 'Organic Traffic', 'Long-tail Capture'] },
+  { num: '02', title: 'Lead Generation Engines', desc: 'We don't just drive traffic — we capture it. Every visitor is a potential lead routed directly to your inbox or phone. No middlemen. No lead-sharing. Yours exclusively.', tags: ['Qualified Leads', 'Automated Delivery', 'High Intent'] },
+  { num: '03', title: 'Bilingual Acquisition Systems', desc: 'Your competitors aren't showing up in Spanish search results. We are. We build English + Spanish systems that tap a high-value, underserved market your rivals can't reach.', tags: ['English + Spanish', 'Underserved Markets', 'Dual Reach'] },
 ];
 
 const MARKETS = [
@@ -39,12 +39,13 @@ export default function Home() {
               <em style={{ fontStyle: 'italic', color: '#B8860B' }}>Not Just Websites</em>
             </h1>
             <p className="text-[#444444] text-lg md:text-xl leading-relaxed mb-12 max-w-xl">
-              We engineer programmatic SEO systems, lead generation engines, and automated client acquisition infrastructure for attorneys, real estate professionals, and business owners who demand results.
+              We build systems that put your business in front of people already searching for your service — and turn that demand into qualified leads.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <Link href="/contact" className="btn-primary text-center">Get Leads for My Business</Link>
               <Link href="/case-study" className="btn-ghost text-center">View Case Study</Link>
             </div>
+            <p className="text-[#888888] text-xs tracking-wider mb-8" style={{ fontFamily: "'JetBrains Mono', monospace" }}>Limited availability per market</p>
             <div className="flex items-center gap-6">
               <div className="h-px w-8 bg-[#B8860B]" />
               <p style={{ fontFamily: "'JetBrains Mono', monospace" }} className="text-[#888888] text-xs tracking-widest uppercase">Beverly Hills, CA · Est. 2014 · (310) 437-3343</p>
@@ -61,7 +62,7 @@ export default function Home() {
               <span className="section-label block mb-3">Verified Results</span>
               <h2 className="text-4xl md:text-5xl text-[#111111]" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700 }}>The Numbers Don't Lie</h2>
             </div>
-            <p className="text-[#666666] text-sm max-w-xs leading-relaxed">Real metrics from live systems we've deployed for clients in competitive legal and real estate markets.</p>
+            <p className="text-[#666666] text-sm max-w-xs leading-relaxed">Every number below comes from a live system we operate — not projections, not case studies from other agencies.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {METRICS.map((m) => (
@@ -94,7 +95,7 @@ export default function Home() {
                 MarVistaLaw: Building a Statewide Legal Lead Generation System
               </h2>
               <p className="text-[#555555] text-base leading-relaxed mb-8">
-                This system captures high-intent search traffic across multiple legal categories — personal injury, immigration, estate planning, and family law — deployed statewide across California in both English and Spanish.
+                We deployed 30,000+ pages targeting legal search queries across every major California city — in English and Spanish. The system now generates inbound leads around the clock, with no ad spend.
               </p>
               <div className="grid grid-cols-3 gap-6 mb-10 border-t border-[#E5E5E5] pt-8">
                 {[{ num: '30K+', label: 'Pages Built' }, { num: '22K+', label: 'Impressions / 7 Days' }, { num: '$1K', label: 'Per Lead Value' }].map((item) => (
@@ -104,7 +105,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <Link href="/case-study" className="btn-primary">Read Full Case Study</Link>
+              <Link href="/case-study" className="btn-primary">See How This System Generates Leads</Link>
             </div>
             <div className="bg-[#E5E5E5] flex items-center justify-center" style={{ aspectRatio: '4/3' }}>
               <div className="text-center p-8">
@@ -153,8 +154,8 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-8" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700 }}>
                 One System.<br />One Market.<br /><em className="text-[#B8860B]">One Operator.</em>
               </h2>
-              <p className="text-[#888888] text-base leading-relaxed mb-8">We don't spread thin across hundreds of clients. We build one dominant system per market — and we work exclusively with the operator who controls it.</p>
-              <p className="text-[#888888] text-base leading-relaxed">When we build your lead generation system, your competitors in that market don't get one. This is not a commodity service. It's a competitive advantage.</p>
+              <p className="text-[#888888] text-base leading-relaxed mb-8">We take on one client per market. That means when we build your system, no competitor in your vertical gets one from us.</p>
+              <p className="text-[#888888] text-base leading-relaxed">This isn't a monthly retainer for blog posts. It's infrastructure that generates inbound leads from organic search — permanently. First mover wins.</p>
             </div>
             <div className="border border-[#2A2A2A]">
               {[
@@ -220,7 +221,7 @@ export default function Home() {
               Your competitors are getting leads right now.
             </h2>
             <p className="text-[#555555] text-lg leading-relaxed mb-12 max-w-xl">
-              We build one system per market. Once your market is taken, it's taken. Request a consultation to find out if your market is still available.
+              Markets are claimed one at a time. Once we build a system in your vertical and city, that slot is closed. Find out if yours is still available.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="btn-primary text-center">Request a Consultation</Link>
