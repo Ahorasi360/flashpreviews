@@ -132,10 +132,10 @@ export default function Home() {
                 MarVistaLaw: Building a Statewide Legal Lead Generation System
               </h2>
               <p style={{ fontSize: '0.95rem', color: '#555', lineHeight: 1.7, marginBottom: '1.75rem' }}>
-                We deployed 30,000+ pages targeting legal search queries across every major California city — in English and Spanish. The system now generates inbound leads around the clock, with no ad spend.
+                We deployed 30,000+ pages across 482 California cities — from Calexico to Redding — covering 51 legal services in English and Spanish. The system generates inbound search traffic around the clock with zero ad spend.
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '1rem', borderTop: '1px solid #E5E5E5', paddingTop: '1.5rem', marginBottom: '2rem' }}>
-                {[{ n: '30K+', l: 'Pages Built' }, { n: '22K+', l: '7-Day Impressions' }, { n: '$1K', l: 'Per Lead Value' }].map(x => (
+                {[{ n: '30K+', l: 'Pages Deployed' }, { n: '482', l: 'California Cities' }, { n: '51', l: 'Legal Services' }].map(x => (
                   <div key={x.l}>
                     <div style={{ ...M, fontSize: 'clamp(1.2rem,3vw,1.6rem)', fontWeight: 700, color: '#111', marginBottom: '4px' }}>{x.n}</div>
                     <div style={{ fontSize: '0.72rem', color: '#888' }}>{x.l}</div>
