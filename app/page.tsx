@@ -28,7 +28,8 @@ export default function Home() {
       <Navigation />
 
       {/* HERO */}
-      <section className="relative min-h-screen flex flex-col justify-center pt-20" style={{ background: 'linear-gradient(135deg, #f8f7f4 0%, #ffffff 60%)', backgroundSize: 'cover' }}>
+      <section className="relative min-h-screen flex flex-col justify-center pt-20" style={{ backgroundImage: `url(https://d2xsxph8kpxj0f.cloudfront.net/310519663296530547/hW5EohCPXhBCRizTCg8qS7/hero-abstract-MGGZzFZNUkdEcY7DjD4kt8.webp)`, backgroundSize: 'cover', backgroundPosition: 'right center' }}>
+        <div className="absolute inset-0" style={{ background: 'rgba(255,255,255,0.88)' }} />
         <div className="container relative z-10 py-24 md:py-32">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-8">
@@ -112,12 +113,13 @@ export default function Home() {
               </div>
               <Link href="/case-study" className="btn-primary">See How This System Generates Leads</Link>
             </div>
-            <div className="bg-[#E5E5E5] flex items-center justify-center" style={{ aspectRatio: '4/3' }}>
-              <div className="text-center p-8">
-                <div className="text-6xl mb-4" style={{ fontFamily: "'JetBrains Mono', monospace", color: '#B8860B' }}>30K</div>
-                <div className="text-[#666] text-sm">Pages Deployed</div>
-                <div className="mt-4 text-[#999] text-xs">MarVistaLaw.com</div>
-              </div>
+            <div>
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663296530547/hW5EohCPXhBCRizTCg8qS7/case-study-visual-FHhzmcqGMFFk9iDkojgt3X.webp"
+                alt="MarVistaLaw Lead Generation System — Search Console Results"
+                className="w-full"
+                style={{ aspectRatio: '4/3', objectFit: 'cover' }}
+              />
             </div>
           </div>
         </div>
@@ -180,6 +182,31 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* SYSTEM DIAGRAM */}
+      <section className="bg-white py-20 md:py-28 border-t border-[#E5E5E5]">
+        <div className="container">
+          <div className="text-center mb-12">
+            <span className="section-label block mb-3">How It Works</span>
+            <h2 className="text-4xl md:text-5xl text-[#111111]" style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700 }}>
+              The System Architecture
+            </h2>
+          </div>
+          <div className="max-w-3xl mx-auto">
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663296530547/hW5EohCPXhBCRizTCg8qS7/system-diagram-MT94BKHCZ9LREGoeFhjLy2.webp"
+              alt="Lead Generation System Architecture — Programmatic SEO to Qualified Leads"
+              className="w-full border border-[#E5E5E5]"
+            />
+          </div>
+          <div className="max-w-2xl mx-auto mt-10 text-center">
+            <p className="text-[#666666] text-sm leading-relaxed">
+              Thousands of pages targeting real search demand — turning organic traffic into inbound leads without paid ads.
+            </p>
           </div>
         </div>
       </section>
