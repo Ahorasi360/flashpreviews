@@ -11,8 +11,8 @@ const METRICS = [
 
 const SERVICES = [
   { num: '01', title: 'Programmatic SEO Systems', desc: 'Thousands of pages targeting the exact queries your buyers type into Google. Built to rank, capture, and convert — at a scale no traditional agency can match.', tags: ['Scale', 'Organic Traffic', 'Long-tail Capture'] },
-  { num: '02', title: 'Lead Generation Engines', desc: 'We don't just drive traffic — we capture it. Every visitor is a potential lead routed directly to your inbox or phone. No middlemen. No lead-sharing. Yours exclusively.', tags: ['Qualified Leads', 'Automated Delivery', 'High Intent'] },
-  { num: '03', title: 'Bilingual Acquisition Systems', desc: 'Your competitors aren't showing up in Spanish search results. We are. We build English + Spanish systems that tap a high-value, underserved market your rivals can't reach.', tags: ['English + Spanish', 'Underserved Markets', 'Dual Reach'] },
+  { num: '02', title: 'Lead Generation Engines', desc: "We don't just drive traffic — we capture it. Every visitor is a potential lead routed directly to your inbox or phone. No middlemen. No lead-sharing. Yours exclusively.", tags: ['Qualified Leads', 'Automated Delivery', 'High Intent'] },
+  { num: '03', title: 'Bilingual Acquisition Systems', desc: "Your competitors aren't showing up in Spanish search results. We are. We build English + Spanish systems that tap a high-value, underserved market your rivals can't reach.", tags: ['English + Spanish', 'Underserved Markets', 'Dual Reach'] },
 ];
 
 const MARKETS = [
