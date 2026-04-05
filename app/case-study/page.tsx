@@ -28,7 +28,7 @@ export default function CaseStudy() {
           <div className="container">
             <div className="flex items-center gap-3 mb-8">
               <div className="gold-rule-short" aria-hidden="true" />
-              <span className="section-label">Case Study — 2024</span>
+              <span className="section-label">Case Study — 2026</span>
             </div>
             <div className="grid md:grid-cols-3 gap-12 items-end">
               <div className="md:col-span-2">
