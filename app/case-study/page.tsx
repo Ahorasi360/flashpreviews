@@ -108,7 +108,7 @@ export default function CaseStudy() {
                 </p>
                 <ul className="grid md:grid-cols-2 gap-8 list-none" aria-label="System components">
                   {[
-                    { title:'301 Cities × 51 Services', desc:'Every major California city, every major legal practice area. 13,570+ unique bilingual page combinations.' },
+                    { title:'482 Cities × 51 Services', desc:'Every major California city, every major legal practice area. 24,582+ unique bilingual page combinations.' },
                     { title:'AI-Generated Content',     desc:'Each page contains unique, locally-relevant content generated via Anthropic Claude API — not template-spun text.' },
                     { title:'Bilingual Architecture',   desc:'Full Spanish-language parity with hreflang implementation, capturing the underserved Latino legal market.' },
                     { title:'Lead Capture Infrastructure', desc:'Integrated Supabase lead storage, Resend email notifications, and direct-to-phone alerts for every inquiry.' },
