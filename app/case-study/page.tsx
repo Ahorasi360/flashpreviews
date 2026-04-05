@@ -33,16 +33,16 @@ export default function CaseStudy() {
             <div className="grid md:grid-cols-3 gap-12 items-end">
               <div className="md:col-span-2">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl text-[#111111] leading-tight mb-6" style={{ fontFamily:"'Cormorant Garamond', serif", fontWeight:700 }}>
-                  MarVistaLaw: Building a<br /><em className="text-[#B8860B]">Statewide Legal Lead System</em>
+                  Mar Vista Law — California Legal Resource Center:<br /><em className="text-[#B8860B]">Statewide Legal Lead System</em>
                 </h1>
                 <p className="text-[#555555] text-lg leading-relaxed max-w-xl">
-                  A California-wide legal lead generation platform built using programmatic SEO — capturing high-intent traffic across personal injury, immigration, estate planning, and family law.
+                  Mar Vista Law — California Legal Resource Center is a statewide legal platform built using programmatic SEO — capturing high-intent traffic across personal injury, immigration, estate planning, and family law.
                 </p>
               </div>
               <aside aria-label="Project details" className="border-t-2 border-[#B8860B] pt-6">
                 <dl>
                   {[
-                    { label:'Client',      value:'MarVistaLaw' },
+                    { label:'Client',      value:'Mar Vista Law — California Legal Resource Center' },
                     { label:'Market',      value:'Statewide — California' },
                     { label:'Verticals',   value:'Multi-Category Legal' },
                     { label:'System Type', value:'Bilingual pSEO' },
@@ -153,6 +153,9 @@ export default function CaseStudy() {
                     </div>
                   ))}
                 </dl>
+                <p className="text-[#AAAAAA] text-xs mt-8" style={{ fontFamily:"'JetBrains Mono', monospace", letterSpacing: '0.04em' }}>
+                  Mar Vista Law — California Legal Resource Center is a legal resource and referral platform and is not a law firm.
+                </p>
               </div>
             </div>
           </div>
