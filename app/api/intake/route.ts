@@ -67,6 +67,7 @@ export async function POST(req: NextRequest) {
     }
 
     // 2. Send email via Resend
+    let resendResponse: { id?: string; error?: string; status?: number } = {};
     if (RESEND_KEY) {
       try {
         const emailBody = `
@@ -102,8 +103,15 @@ export async function POST(req: NextRequest) {
 
         if (resendRes.ok) {
           emailSucceeded = true;
+          try {
+            const respBody = await resendRes.json();
+            resendResponse = { id: respBody?.id, status: resendRes.status };
+          } catch {
+            resendResponse = { status: resendRes.status };
+          }
         } else {
           const errText = await resendRes.text();
+          resendResponse = { status: resendRes.status, error: errText.slice(0, 400) };
           errors.push(`Resend ${resendRes.status}: ${errText.slice(0, 200)}`);
           console.error('[intake] Resend send failed:', resendRes.status, errText);
         }
@@ -130,6 +138,7 @@ export async function POST(req: NextRequest) {
       success: true,
       saved: supabaseSucceeded,
       emailed: emailSucceeded,
+      resend: resendResponse,
       ...(errors.length ? { warnings: errors } : {}),
     });
   } catch (err) {
