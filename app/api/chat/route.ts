@@ -61,20 +61,49 @@ End serious conversations with: "Please complete the intake form and include you
 The intake form is at: /contact`;
 
 export async function POST(req: NextRequest) {
-  const { messages } = await req.json();
+  try {
+    const { messages } = await req.json();
+    const apiKey = process.env.ANTHROPIC_API_KEY;
 
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 300,
-      system: SYSTEM_PROMPT,
-      messages,
-    }),
-  });
+    if (!apiKey) {
+      console.error('[chat] ANTHROPIC_API_KEY env var not set');
+      return NextResponse.json({
+        text: "I'm having trouble connecting. Please try again or call us at (310) 437-3343.",
+      });
+    }
 
-  const data = await response.json();
-  const text = data.content?.[0]?.text || "I'm having trouble connecting. Please try again or call us at (310) 846-1658.";
-  return NextResponse.json({ text });
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 300,
+        system: SYSTEM_PROMPT,
+        messages,
+      }),
+    });
+
+    if (!response.ok) {
+      const errBody = await response.text();
+      console.error(`[chat] Anthropic API ${response.status}:`, errBody.slice(0, 500));
+      return NextResponse.json({
+        text: "I'm having trouble connecting. Please try again or call us at (310) 437-3343.",
+      });
+    }
+
+    const data = await response.json();
+    const text =
+      data?.content?.[0]?.text ||
+      "I'm having trouble connecting. Please try again or call us at (310) 437-3343.";
+    return NextResponse.json({ text });
+  } catch (err) {
+    console.error('[chat] Unexpected error:', err);
+    return NextResponse.json({
+      text: "I'm having trouble connecting. Please try again or call us at (310) 437-3343.",
+    });
+  }
 }
